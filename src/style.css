@@ -1,0 +1,108 @@
+.mithril-timepicker {
+  position: relative;
+  display: inline-block;
+  min-width: 100px;
+  min-height: 40px;
+  background: #dddddd;
+  user-select: none; }
+  .mithril-timepicker * {
+    box-sizing: border-box;
+    font-family: Monaco, monospace;
+    cursor: pointer; }
+  .mithril-timepicker .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; }
+  .mithril-timepicker .display {
+    position: relative;
+    height: 40px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; }
+  .mithril-timepicker .clock {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    transform: translateY(-50%); }
+    .mithril-timepicker .clock:before, .mithril-timepicker .clock:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 14px;
+      height: 1px;
+      background: #999;
+      transform-origin: left center; }
+    .mithril-timepicker .clock:before {
+      width: 45%;
+      transform: rotate(-90deg); }
+    .mithril-timepicker .clock:after {
+      width: 30%;
+      transform: rotate(15deg); }
+  .mithril-timepicker .num {
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: 0.2s; }
+    .mithril-timepicker .num:hover {
+      text-decoration: underline; }
+  .mithril-timepicker .current {
+    background: black;
+    color: white; }
+  .mithril-timepicker .editor {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 250px; }
+    .mithril-timepicker .editor.meridian .box {
+      width: 47%; }
+  .mithril-timepicker .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    margin: 2.5px;
+    padding: 8px 0;
+    border: 1px solid black;
+    font-size: 0.8em; }
+  .mithril-timepicker .i15 .box {
+    width: 22%; }
+  .mithril-timepicker.editing {
+    box-shadow: 0 2px 5px 0 black; }
+    .mithril-timepicker.editing .overlay, .mithril-timepicker.editing .display, .mithril-timepicker.editing .editor {
+      z-index: 999999; }
+    .mithril-timepicker.editing .display {
+      height: 80px;
+      width: 250px;
+      background: black;
+      color: white; }
+    .mithril-timepicker.editing .num {
+      display: inline-block;
+      width: 35%;
+      padding: 10px;
+      border: 1px solid white;
+      color: white;
+      font-size: 2em;
+      text-align: center; }
+      .mithril-timepicker.editing .num.current {
+        background: white;
+        color: black; }
+    .mithril-timepicker.editing .tfh .num {
+      width: 48%; }
+    .mithril-timepicker.editing #r {
+      margin-left: 10px; }
+    .mithril-timepicker.editing .editor {
+      background: #dddddd;
+      box-shadow: 0 2px 5px 0 black; }
+
+/*# sourceMappingURL=style.css.map */
