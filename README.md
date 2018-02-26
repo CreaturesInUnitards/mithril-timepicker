@@ -4,7 +4,7 @@ Pick a time! But only if you're using Mithril, and only for flexbox-capable brow
 
 ### Demo
 
-[mithril-timepicker at flems.io](https://tinyurl.com/yd593dvd)
+[mithril-timepicker at flems.io](https://tinyurl.com/y877gfgz)
 
 ### Installation
 
