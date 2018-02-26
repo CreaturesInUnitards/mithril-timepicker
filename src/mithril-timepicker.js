@@ -46,10 +46,9 @@
 	}
 
 	function boxClass(time, thisValue, editing) {
-		let currentValue = time[editing]
-		if (typeof thisValue == 'string') {
-			currentValue = time.h < 12 ? 'AM' : 'PM'
-		}
+		let currentValue = typeof thisValue == 'string' 
+			? time.h < 12 ? 'AM' : 'PM'
+			: time[editing]
 		return thisValue === currentValue ? 'current' : ''
 	}
 
