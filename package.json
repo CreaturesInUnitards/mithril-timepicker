@@ -2,7 +2,7 @@
   "name": "mithril-timepicker",
   "version": "0.8.1",
   "description": "Pick a time! But only if you're using mithril",
-  "main": "index.js",
+  "main": "mithril-timepicker.js",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server"

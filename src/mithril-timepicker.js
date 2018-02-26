@@ -122,7 +122,7 @@
 				increment = (attrs.increment === 5 || attrs.increment === 15) ? attrs.increment : 5
 				if (time) begun = true
 			},
-			view: (vnode) => m('.mithril-timepicker',
+			view: (vnode) => m('.ciu-mithril-timepicker',
 				{ class: editing ? 'editing' : '' },
 				editing && m('.overlay', { onclick: toggleEditor }),
 				m('.display',

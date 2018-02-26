@@ -46,10 +46,9 @@
 	}
 
 	function boxClass(time, thisValue, editing) {
-		let currentValue = time[editing]
-		if (typeof thisValue == 'string') {
-			currentValue = time.h < 12 ? 'AM' : 'PM'
-		}
+		let currentValue = typeof thisValue == 'string' 
+			? time.h < 12 ? 'AM' : 'PM'
+			: time[editing]
 		return thisValue === currentValue ? 'current' : ''
 	}
 
@@ -122,7 +121,7 @@
 				increment = (attrs.increment === 5 || attrs.increment === 15) ? attrs.increment : 5
 				if (time) begun = true
 			},
-			view: (vnode) => m('.mithril-timepicker',
+			view: (vnode) => m('.ciu-mithril-timepicker',
 				{ class: editing ? 'editing' : '' },
 				editing && m('.overlay', { onclick: toggleEditor }),
 				m('.display',
