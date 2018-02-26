@@ -1,0 +1,131 @@
+$display-background-color: #dddddd
+$clock-icon-stroke-color: #999
+
+.mithril-timepicker
+	position: relative
+	display: inline-block
+	min-width: 100px
+	min-height: 40px
+	background: $display-background-color
+	user-select: none
+
+	*
+		box-sizing: border-box
+		font-family: Monaco, monospace
+		cursor: pointer
+
+	.overlay
+		position: fixed
+		top: 0
+		left: 0
+		width: 100vw
+		height: 100vh
+
+	.display
+		position: relative
+		height: 40px
+		padding: 8px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 16px
+
+	.clock
+		position: absolute
+		left: 5px
+		top: 50%
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		border: 1px solid $clock-icon-stroke-color
+		transform: translateY(-50%)
+		
+		&:before, &:after
+			content: ''
+			position: absolute
+			top: 15px
+			left: 14px
+			height: 1px
+			background: $clock-icon-stroke-color
+			transform-origin: left center
+			
+		&:before
+			width: 45%
+			transform: rotate(-90deg)
+
+		&:after
+			width: 30%
+			transform: rotate(15deg)
+
+	.num
+		border: 1px solid transparent
+		border-radius: 6px
+		transition: 0.2s
+		
+		&:hover
+			text-decoration: underline
+
+	.current
+		background: black
+		color: white
+
+	.editor
+		position: absolute
+		top: 100%
+		left: 0
+		padding: 5px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		width: 250px
+		
+		&.meridian .box
+			width: 47%
+
+	.box
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 35px
+		margin: 2.5px
+		padding: 8px 0
+		border: 1px solid black
+		font-size: 0.8em
+
+	.i15 .box
+		width: 22%
+
+	&.editing
+		box-shadow: 0 2px 5px 0 black
+		
+		.overlay, .display, .editor
+			z-index: 999999
+			
+		.display
+			height: 80px
+			width: 250px
+			background: black
+			color: white
+
+		.num
+			display: inline-block
+			width: 35%
+			padding: 10px
+			border: 1px solid white
+			color: white
+			font-size: 2em
+			text-align: center
+			
+			&.current
+				background: white
+				color: black
+			
+		.tfh .num
+			width: 48%
+			
+		#r
+			margin-left: 10px
+	
+		.editor
+			background: $display-background-color
+			box-shadow: 0 2px 5px 0 black
