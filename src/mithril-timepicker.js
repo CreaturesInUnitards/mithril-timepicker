@@ -79,7 +79,11 @@
 
 		function chooseEditor(id) {
 			editing = id
-			if (!editing) attrs.onchange(time)
+			if (!editing) {
+				typeof attrs.onchange == 'function' 
+					? attrs.onchange(time)
+					: console.log("This timepicker wasn't provided an onchange callback.")
+			}
 		}
 
 		function numberClick(e) {

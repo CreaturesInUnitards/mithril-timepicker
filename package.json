@@ -1,6 +1,6 @@
 {
   "name": "mithril-timepicker",
-  "version": "0.8",
+  "version": "0.8.0",
   "description": "Pick a time! But only if you're using mithril",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,11 @@
     "start": "webpack-dev-server"
   },
   "repository": "https://github.com/CreaturesInUnitards/mithril-timepicker",
-  "keywords": ["timepicker", "mithril", "mithril-component"],
+  "keywords": [
+    "timepicker",
+    "mithril",
+    "mithril-component"
+  ],
   "author": "Scott Simpson <portrayme@mac.com>",
   "license": "MIT",
   "devDependencies": {
