@@ -1,6 +1,6 @@
 {
   "name": "mithril-timepicker",
-  "version": "0.8.2",
+  "version": "0.9.0",
   "description": "Pick a time! But only if you're using mithril",
   "main": "mithril-timepicker.js",
   "scripts": {
