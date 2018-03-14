@@ -2,7 +2,10 @@
   font-family: "Source Code Pro", monaco, monospace;
   position: relative;
   width: 120px;
-  height: 40px; }
+  height: 40px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
   .ciu-mithril-timepicker * {
     box-sizing: border-box; }
   .ciu-mithril-timepicker .display {
